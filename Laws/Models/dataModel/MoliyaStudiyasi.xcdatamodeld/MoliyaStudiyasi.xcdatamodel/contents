@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ParentsCategory" representedClassName=".ParentsCategory" syncable="YES" codeGenerationType="class">
+        <attribute name="mainCategory" attributeType="String"/>
+        <relationship name="sections" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sections" inverseName="parentCategory" inverseEntity="Sections"/>
+    </entity>
+    <entity name="Sections" representedClassName=".Sections" syncable="YES" codeGenerationType="class">
+        <attribute name="chaptersName" attributeType="String"/>
+        <attribute name="liked" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="sectionsName" attributeType="String"/>
+        <relationship name="parentCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ParentsCategory" inverseName="sections" inverseEntity="ParentsCategory"/>
+    </entity>
+    <elements>
+        <element name="ParentsCategory" positionX="-361.53125" positionY="-7.0234375" width="125.42578125" height="73"/>
+        <element name="Sections" positionX="-151.98828125" positionY="-20.89453125" width="128" height="103"/>
+    </elements>
+</model>
